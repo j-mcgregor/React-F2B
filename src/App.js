@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Use Hash Router for deployment to GH Pages HashRouter
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Contacts
 import Contacts from './components/contacts/Contacts';
@@ -23,7 +24,7 @@ class App extends Component {
     return (
       // Provider is outermost component
       <Provider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div className="App">
             <Header branding="Contact Manager"/>
             <div className="container">
