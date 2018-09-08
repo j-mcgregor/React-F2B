@@ -1,0 +1,7 @@
+.card-header {
+  transition:.1s;
+}
+.card-header:hover {
+  background: #838383;
+  color:white;
+}

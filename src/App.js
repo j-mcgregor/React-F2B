@@ -5,9 +5,16 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contacts from './components/contacts/Contacts';
 import AddContact from './components/contacts/AddContact';
 import EditContact from './components/contacts/EditContact';
+// Posts
+import Posts from './components/posts/Posts';
+import AddPost from './components/posts/AddPost';
+import ShowPost from './components/posts/ShowPost';
+import EditPost from './components/posts/EditPost';
 // Layout
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 // Pages
+import Landing from './components/pages/Landing';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 // import Test from './components/test/Test';
@@ -16,7 +23,7 @@ import NotFound from './components/pages/NotFound';
 import { Provider } from './context';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
   render() {
@@ -26,17 +33,26 @@ class App extends Component {
       <Provider>
         <Router basename={process.env.PUBLIC_URL}>
           <div className="App">
-            <Header branding="Contact Manager"/>
-            <div className="container">
+            <Header branding="JPH with React"/>
+            <div className="container-fluid">
               <Switch>
-                <Route exact path="/" component={Contacts}/>
-                <Route exact path="/contacts/add" component={AddContact}/>
+                {/* Landing */}
+                <Route exact path="/" component={ Landing } />
+                {/* Contacts */}
+                <Route exact path="/contacts" component={Contacts}/>
+                <Route exact path="/contacts/new" component={AddContact}/>
                 <Route exact path="/contacts/:id/edit" component={EditContact}/>
                 <Route exact path="/about" component={About}/>
+                {/* Posts */}
+                <Route exact path="/posts" component={ Posts } />
+                <Route exact path="/posts/new" component={ AddPost } />
+                <Route exact path="/posts/:id" component={ ShowPost } />
+                <Route exact path="/posts/:id/edit" component={ EditPost } />
                 {/* <Route exact path="/test" component={Test}/> */}
                 <Route component={NotFound}/>
               </Switch>
             </div>
+            <Footer />
           </div>
         </Router>
       </Provider>

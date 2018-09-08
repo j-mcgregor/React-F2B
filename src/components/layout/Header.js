@@ -7,22 +7,36 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
   const { branding } = props;
   return(
-    <div>
-      <nav className="navbar navbar-expand-xs navbar-dark bg-danger mb-3 py-0">
-        <div className="container">
-          <a href="/" className="navbar-brand">{ branding }</a>
-          <Link to="/" className="nav-link" style={{color:'white'}}>
-            <i className="fas fa-home" /> 
-          </Link>
-          <Link to="/contacts/add" className="nav-link" style={{color:'white'}}>
-            <i className="fas fa-plus"/> 
-          </Link>
-          <Link to="/about" className="nav-link" style={{color:'white'}}>
-            <i className="fas fa-question"/> 
-          </Link>
-        </div>
-      </nav>
-    </div>
+    <React.Fragment>   
+      <nav className="navbar navbar-expand-lg fixed-top text-dark">
+      <Link className="navbar-brand" to="/">{ branding }</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <i className="fas fa-bars"></i>
+      </button>
+
+      <div className="collapse navbar-collapse" id="navbarsExample01">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item active">
+            <Link to="/about" className="nav-link" style={{color:'white'}}>About</Link>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contacts</a>
+            <div className="dropdown-menu bg-dark" aria-labelledby="dropdown01">
+              <Link className="dropdown-item bg-dark text-white" to="/contacts">See all contacts</Link>
+              <Link className="dropdown-item bg-dark text-white" to="/contacts/new">Add Contact</Link>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="https://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Posts</a>
+            <div className="dropdown-menu bg-dark" aria-labelledby="dropdown02">
+              <Link className="dropdown-item bg-dark text-white " to="/posts">See all posts</Link>
+              <Link className="dropdown-item bg-dark text-white " to="/posts/new">Create Post</Link>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </React.Fragment>
   );
 };
 

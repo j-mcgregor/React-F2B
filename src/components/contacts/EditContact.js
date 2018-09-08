@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
-import uuid from 'uuid';
+// import uuid from 'uuid';
 import axios from 'axios';
-import Contact from './Contact';
+// import Contact from './Contact';
 
 class EditContact extends Component {
   state = {
@@ -89,42 +89,42 @@ class EditContact extends Component {
         { value => {
           const { dispatch } = value;
           return(
-            <div className="card mb-3">
-            <div className="card-header">
-              Edit { name  }
+            <div className="py-5 edit-contact">
+              <div className="card-body py-5">
+                {/* we want to use dispatch inside the onSubmit */}
+                <form className="form-signin py-5 my-5" onSubmit={ this.onSubmit.bind(this, dispatch) }>
+                <h5 className="display-6">
+                  Edit { name  }
+                </h5>
+                  <TextInputGroup 
+                    label="Name"
+                    name="name"
+                    placeholder="Enter Name"
+                    value={ name }
+                    onChange={ this.onChange }
+                    error={ errors.name }
+                  />
+                  <TextInputGroup 
+                    label="Email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    value={ email }
+                    onChange={ this.onChange }
+                    error={ errors.email }
+                  />
+                  <TextInputGroup 
+                    label="Phone"
+                    name="phone"
+                    placeholder="Enter Phone"
+                    value={ phone }
+                    onChange={ this.onChange }
+                    error={ errors.phone }
+                  />
+                  <input type="submit" value="Update Contact" className="btn btn-block btn-primary"/>
+                </form>
+              </div>
             </div>
-            <div className="card-body">
-              {/* we want to use dispatch inside the onSubmit */}
-              <form onSubmit={ this.onSubmit.bind(this, dispatch) }>
-                <TextInputGroup 
-                  label="Name"
-                  name="name"
-                  placeholder="Enter Name"
-                  value={ name }
-                  onChange={ this.onChange }
-                  error={ errors.name }
-                />
-                <TextInputGroup 
-                  label="Email"
-                  type="email"
-                  name="email"
-                  placeholder="Enter Email"
-                  value={ email }
-                  onChange={ this.onChange }
-                  error={ errors.email }
-                />
-                <TextInputGroup 
-                  label="Phone"
-                  name="phone"
-                  placeholder="Enter Phone"
-                  value={ phone }
-                  onChange={ this.onChange }
-                  error={ errors.phone }
-                />
-                <input type="submit" value="Update Contact" className="btn btn-block btn-primary"/>
-              </form>
-            </div>
-          </div>
           )
         }}
       </Consumer>

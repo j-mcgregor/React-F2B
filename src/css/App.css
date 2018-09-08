@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Impact Label';
+  src: url(../fonts/Impact\ Label.ttf); }
+@font-face {
+  font-family: 'Impact Label Reversed';
+  src: url(../fonts/Impact\ Label\ Reversed.ttf); }
+body {
+  font-family: 'Impact Label Reversed'; }
+
+.navbar {
+  background: #fac51a;
+  font-family: 'Impact Label Reversed'; }
+  .navbar a, .navbar i {
+    color: #343a40; }
+  .navbar .navbar-toggler {
+    outline: none; }
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+  .container-fluid .jumbotron {
+    background: #fac51a;
+    justify-content: center;
+    height: 95vh;
+    width: 100%;
+    margin-bottom: 0; }
+
+.main .full-section {
+  padding: 45vh 0; }
+  .main .full-section .icon-container {
+    margin: 70px; }
+    .main .full-section .icon-container a {
+      color: white;
+      padding: 20px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin: 20px;
+      transition: .2s; }
+      .main .full-section .icon-container a:hover {
+        background: #17a2b8;
+        color: #fff;
+        border-color: #17a2b8; }
+.main .half-section {
+  padding: 110px 0; }
+  .main .half-section .icon-container a {
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 20px;
+    transition: .2s; }
+    .main .half-section .icon-container a:hover {
+      background: white;
+      color: #343a40; }
+.main .row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.gallery {
+  font-family: 'Impact Label Reversed'; }
+  .gallery .col-sm-3 {
+    padding: 0;
+    overflow: hidden !important; }
+    .gallery .col-sm-3 img {
+      transition: .2s; }
+      .gallery .col-sm-3 img:hover:not(.modal) {
+        transform: scale(1.1);
+        opacity: .5; }
+
+.modal .modal-content {
+  border-radius: 0;
+  color: #343a40; }
+  .modal .modal-content .modal-header {
+    text-align: center; }
+    .modal .modal-content .modal-header .byline {
+      font-stretch: expanded;
+      font-style: italic; }
+  .modal .modal-content img:hover:not(.modal) {
+    transform: scale(1); }
+  .modal .modal-content .modal-footer {
+    flex-direction: column; }
+
+.footer-icons a {
+  text-decoration: none;
+  color: white;
+  overflow: hidden !important; }
+.footer-icons i {
+  background: #343a40;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  transition: .2s; }
+  .footer-icons i:hover {
+    transform: scale(1.2);
+    animation: colorShift 10s infinite ease-in-out; }
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto; }
+  .form-signin .checkbox {
+    font-weight: 400; }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0; }
+    .form-signin .form-control::placeholder {
+      transition: .3s; }
+    .form-signin .form-control:focus {
+      z-index: 2;
+      border-color: #fac51a;
+      box-shadow: none;
+      transition: .3s; }
+      .form-signin .form-control:focus::placeholder {
+        color: #fac51a;
+        font-size: 14px; }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  .form-signin input[type="submit"] {
+    background: none;
+    border: 1px solid #fac51a;
+    color: #343a40;
+    transition: .2s; }
+    .form-signin input[type="submit"]:hover {
+      background: #343a40;
+      border-color: #343a40;
+      color: #fac51a; }
+
+@keyframes colorShift {
+  0% {
+    background: #fa1a1a; }
+  20% {
+    background: #db810c; }
+  40% {
+    background: #fae41a; }
+  60% {
+    background: #47fa1a; }
+  80% {
+    background: #1af2fa; }
+  100% {
+    background: #af729b; } }
+.list-group-item {
+  background: #343a40; }
+
+.card-header:hover {
+  background: #343a40;
+  border-color: #343a40;
+  color: #fac51a; }
+
+.edit-contact .card-body {
+  background: #202529;
+  color: white;
+  font-family: 'Impact Label Reversed'; }
+  .edit-contact .card-body input[type="submit"] {
+    color: white; }
+
+/*# sourceMappingURL=App.css.map */

@@ -12,17 +12,19 @@ class Contacts extends Component {
           const { contacts } = value;
           return(
             // React.Fragment is a good way of removing unnecessary divs (eg those without classes)
-            <React.Fragment>
-              <h1 className="display-4 mb-2">
+            <div className="container my-5 py-5">
+              <h1 className="display-5 mb-2">
                 <span className="text-danger">Contact List</span>
               </h1>
-            { contacts.map(contact => (
-              <Contact 
-                key={ contact.id } 
-                contact={ contact }
-                />
-            ))}
-          </React.Fragment>
+              <div className="row">
+                { contacts.map(contact => (
+                  <Contact 
+                  key={ contact.id } 
+                  contact={ contact }
+                  />
+                ))}
+              </div>
+            </div>
           )
         }}
       </Consumer>

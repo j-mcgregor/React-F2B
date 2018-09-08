@@ -42,40 +42,42 @@ class Contact extends Component {
           // console.log(dispatch);
           
           return(
-            <div className="card card-body mb-3">
-              <h4>
-                { contact.name }
-                <i 
-                  onClick={ this.onShowClick.bind(this, contact) } 
-                  className={
-                    // classnames is how we can have conditional classes
-                    classnames(
-                      'pl-2 fas ', 
-                      { 
-                        'fa-chevron-down': showContactInfo, 
-                        'fa-chevron-right': !showContactInfo 
-                      }
-                    )
-                  }
-                  style={{ cursor: 'pointer' }}
-                  />
-                <i 
-                  onClick={ this.onDeleteClick.bind(this, contact.id, dispatch ) }
-                  className="fas fa-times" 
-                  style={{ cursor:'pointer',float:'right',color:'red'}}
-                  />
-                <Link to={`/contacts/${contact.id}/edit`}>
+            <div className="col-sm-4">
+              <div className="card card-body mb-3">
+                <h6 className="display-6">
+                  { contact.name }
                   <i 
-                    className="fas fa-pencil-alt" 
-                    style={{ cursor:'pointer',float:'right',color:'red',paddingRight:'15px'}}
+                    onClick={ this.onShowClick.bind(this, contact) } 
+                    className={
+                      // classnames is how we can have conditional classes
+                      classnames(
+                        'pl-2 fas ', 
+                        { 
+                          'fa-chevron-down': showContactInfo, 
+                          'fa-chevron-right': !showContactInfo 
+                        }
+                      )
+                    }
+                    style={{ cursor: 'pointer' }}
                     />
-                </Link>
-              </h4>
-              { showContactInfo ? (<ul className="list-group">
-                <li className="list-group-item">Email: { contact.email }</li>
-                <li className="list-group-item">Phone: { contact.phone }</li>
-              </ul>) : null }
-              
+                  <i 
+                    onClick={ this.onDeleteClick.bind(this, contact.id, dispatch ) }
+                    className="fas fa-times" 
+                    style={{ cursor:'pointer',float:'right',color:'red'}}
+                    />
+                  <Link to={`/contacts/${contact.id}/edit`}>
+                    <i 
+                      className="fas fa-pencil-alt" 
+                      style={{ cursor:'pointer',float:'right',color:'red',paddingRight:'15px'}}
+                      />
+                  </Link>
+                </h6>
+                { showContactInfo ? (<ul className="list-group">
+                  <li className="list-group-item">Email: { contact.email }</li>
+                  <li className="list-group-item">Phone: { contact.phone }</li>
+                </ul>) : null }
+                
+              </div>
             </div>
           )
         }}

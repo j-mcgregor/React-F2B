@@ -1,0 +1,258 @@
+// GLOBAL
+@font-face {
+  font-family: 'Impact Label';
+  src: url(../fonts/Impact\ Label.ttf);
+}
+
+@font-face {
+  font-family: 'Impact Label Reversed';
+  src: url(../fonts/Impact\ Label\ Reversed.ttf);
+}
+
+body {
+  font-family: 'Impact Label Reversed';
+}
+
+// NAVBAR
+.navbar {
+  background: #fac51a;
+  font-family: 'Impact Label Reversed';
+
+  a, i {
+    color: #343a40;
+  }
+
+  .navbar-toggler {
+    outline:none;
+  }
+}
+
+// LANDING
+// JUMBOTRON
+.container-fluid {
+  padding-left:0;
+  padding-right:0;
+
+  .jumbotron {
+    background: #fac51a;
+    justify-content: center;
+    height:95vh;
+    width:100%;
+    margin-bottom:0;
+  }
+}
+
+.main {
+
+  .full-section {
+    padding:45vh 0;
+
+    .icon-container {
+      margin: 70px;
+
+      a {
+        color:white;
+        padding:20px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin: 20px;
+        transition:.2s;
+  
+        &:hover {
+          background: #17a2b8;
+          color: #fff;
+          border-color: #17a2b8;
+        }
+      }
+
+    }
+  }
+
+  .half-section {
+    padding:110px 0;
+
+    .icon-container {
+    
+      a {
+        color:white;
+        padding:20px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin: 20px;
+        transition:.2s;
+  
+        &:hover {
+          background: white;
+          color: #343a40;
+        }
+      }
+    }
+  
+  }
+
+  .row {
+    margin-left:0;
+    margin-right:0;
+  } 
+}
+
+// ABOUT
+.gallery {
+  font-family: 'Impact Label Reversed';
+
+  .col-sm-3 {
+    padding:0;
+    overflow: hidden !important;
+
+    img {
+      transition: .2s;
+
+      &:hover:not(.modal) {
+        transform:scale(1.1);
+        opacity: .5;
+      }
+    }
+  }
+
+}
+
+// ABOUT MODAL
+.modal {
+  
+  .modal-content {
+    border-radius:0;
+    color: #343a40;
+    
+    .modal-header {
+      text-align: center;
+      
+      .byline {
+        font-stretch: expanded;
+        font-style:italic;
+      }
+    }
+    img {
+      &:hover:not(.modal) {
+        transform:scale(1);
+      }
+    }
+    .modal-footer {
+      flex-direction: column;
+    }
+  }
+}
+
+// FOOTER
+.footer-icons {
+  a {
+    text-decoration:none;
+    color:white;
+    overflow: hidden !important;
+  }
+
+  i {
+    background: #343a40;
+    padding:20px;
+    margin:5px;
+    border-radius: 50%;
+    transition:.2s;
+    
+    &:hover {
+      transform:scale(1.2);
+      animation:colorShift 10s infinite ease-in-out;
+    }
+  }
+}
+
+// FORMS
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  
+  .checkbox {
+    font-weight: 400;
+  }
+  .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+
+    &::placeholder {
+      transition:.3s;
+    }
+
+    &:focus {
+      z-index: 2;
+      border-color: #fac51a;
+      box-shadow: none;
+      transition:.3s;
+      
+      &::placeholder {
+        color:#fac51a;
+        font-size: 14px;
+      }
+    }
+
+  }
+  input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  input[type="submit"] {
+    background: none;
+    border:1px solid #fac51a;
+    color:#343a40;
+    transition:.2s;
+
+    &:hover {
+      background: #343a40;
+      border-color:#343a40;
+      color:#fac51a;
+    }
+  }
+}
+
+@keyframes colorShift {
+  0% { background: #fa1a1a }
+  20% { background: #db810c }
+  40% { background: #fae41a }
+  60% { background: #47fa1a }
+  80% { background: #1af2fa }
+  100% { background: #af729b }
+}
+
+// INDEX PAGES
+.list-group-item {
+  background: #343a40;
+}
+.card-header {
+  &:hover {
+    background: #343a40;
+    border-color:#343a40;
+    color:#fac51a;
+  }
+}
+
+.edit-contact .card-body {
+  background: #202529;
+  color:white;
+  font-family: 'Impact Label Reversed';
+
+  input[type="submit"] {
+    color:white;
+  }
+
+}

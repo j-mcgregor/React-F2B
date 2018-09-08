@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import TextInputGroup from '../layout/TextInputGroup';
-import uuid from 'uuid';
+// import uuid from 'uuid';
 import axios from 'axios';
 
 class AddContact extends Component {
@@ -78,42 +78,37 @@ class AddContact extends Component {
         { value => {
           const { dispatch } = value;
           return(
-            <div className="card mb-3">
-            <div className="card-header">
-              Add Contact
-            </div>
-            <div className="card-body">
-              {/* we want to use dispatch inside the onSubmit */}
-              <form onSubmit={ this.onSubmit.bind(this, dispatch) }>
+            <div className="py-5 my-5">
+              <form className="form-signin" nSubmit={this.onSubmit.bind(this, dispatch) } >
+                <h1 className="h3 mb-3 font-weight-normal">Add Contact</h1>
                 <TextInputGroup 
-                  label="Name"
-                  name="name"
-                  placeholder="Enter Name"
-                  value={ name }
-                  onChange={ this.onChange }
-                  error={ errors.name }
-                />
-                <TextInputGroup 
-                  label="Email"
-                  type="email"
-                  name="email"
-                  placeholder="Enter Email"
-                  value={ email }
-                  onChange={ this.onChange }
-                  error={ errors.email }
-                />
-                <TextInputGroup 
-                  label="Phone"
-                  name="phone"
-                  placeholder="Enter Phone"
-                  value={ phone }
-                  onChange={ this.onChange }
-                  error={ errors.phone }
-                />
-                <input type="submit" value="Add Contact" className="btn btn-block btn-primary"/>
+                    label="Name"
+                    name="name"
+                    placeholder="Enter Name"
+                    value={ name }
+                    onChange={ this.onChange }
+                    error={ errors.name }
+                  />
+                  <TextInputGroup 
+                    label="Email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    value={ email }
+                    onChange={ this.onChange }
+                    error={ errors.email }
+                  />
+                  <TextInputGroup 
+                    label="Phone"
+                    name="phone"
+                    placeholder="Enter Phone"
+                    value={ phone }
+                    onChange={ this.onChange }
+                    error={ errors.phone }
+                  />
+                  <input type="submit" value="Add Contact" className="btn btn-lg btn-primary btn-block"/>
               </form>
             </div>
-          </div>
           )
         }}
       </Consumer>

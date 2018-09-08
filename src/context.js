@@ -31,6 +31,22 @@ const reducer = (state, action) => {
         ...state,
         contacts: state.contacts.map(contact => contact.id === action.payload.id ? (contact = action.payload) : contact )
       }
+    case 'DELETE_POST':
+      return {
+        ...state,
+        posts: state.posts.filter(post => post.id !== action.payload)
+      };
+    case 'ADD_POST':
+      return {
+        ...state,
+        // Instead of doing .push(), we can alter the contacts state like so:
+        posts: [action.payload, ...state.posts]
+      }
+    case 'UPDATE_POST':
+      return {
+        ...state,
+        posts: state.posts.map(post => post.id === action.payload.id ? (post = action.payload) : post )
+      }
     default:
       return state
   }
@@ -39,6 +55,7 @@ const reducer = (state, action) => {
 export class Provider extends Component {
   state = {
     contacts:[],
+    posts:[],
     // Dispatch is part of our state
     // When we have a Consumer, dispatch should be accessible from anywhere
     dispatch: action => this.setState(state => reducer(state,action))
@@ -46,10 +63,13 @@ export class Provider extends Component {
 
   // We can use Async/Await to make the calls more asynchronous
   async componentDidMount(){
-    const res = await axios
+    const resUsers = await axios
       .get('https://jsonplaceholder.typicode.com/users');
-      
-    this.setState({ contacts: res.data })
+    this.setState({ contacts: resUsers.data });
+
+    const resPosts = await axios
+      .get('https://jsonplaceholder.typicode.com/posts');
+    this.setState({ posts: resPosts.data });
   }
 
   // Anything you want to be accessible throughout your application you can put in a property called value
