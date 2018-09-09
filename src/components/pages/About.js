@@ -34,20 +34,36 @@ export default class About extends Component {
             target="target-2"
           />
           <Thumbnail 
+            image="./img/Bloom_screenshot.png" 
+            title=""  
+            link="" 
+            byline=""
+            description=""
+            target="target-7"
+          />
+          <Thumbnail 
+            image="./img/Oddjob_screenshot.png" 
+            title="OddJob"  
+            link="" 
+            byline="Make the little things count"
+            description="My final project at General Assembly in June 2017, made with a Rails API, Postgres and AngularJS"
+            target="target-7"
+          />
+          <Thumbnail 
+            image="./img/KillingEve_screenshot.png" 
+            title="Piñata"  
+            link="https://github.com/patchyj/Killing-Eve" 
+            byline=""
+            description="'The landing page for upcoming TV thriller Killing Eve, built using HTML5 and SASS"
+            target="target-4"
+          />
+          <Thumbnail 
             image="./img/placeholder.gif" 
             title="DevConnector"  
             link="" 
             byline="First full stack MERN application"
             description="This was built coding along with Traversy Media's MERN stack course on Udemy, using mLab as its Mongo database, NodeJS, Express and React with Redux"
             target="target-3"
-          />
-          <Thumbnail 
-            image="./img/placeholder.gif" 
-            title="Piñata"  
-            link="https://github.com/patchyj/Killing-Eve" 
-            byline=""
-            description="'The landing page for upcoming TV thriller Killing Eve, built using HTML5 and SASS"
-            target="target-4"
           />
           <Thumbnail 
             image="./img/placeholder.gif" 
@@ -64,22 +80,6 @@ export default class About extends Component {
             byline=""
             description="Building on Austin Kabiru's code-along, I built another Rails API for a potential User Management System, using JWT, Rails API, PostgresQL, RSpec, FactoryBot, React and Bootstrap"
             target="target-6"
-          />
-          <Thumbnail 
-            image="./img/placeholder.gif" 
-            title=""  
-            link="" 
-            byline=""
-            description=""
-            target="target-7"
-          />
-          <Thumbnail 
-            image="./img/placeholder.gif" 
-            title=""  
-            link="" 
-            byline=""
-            description=""
-            target="target-7"
           />
         </div>
       </div>
