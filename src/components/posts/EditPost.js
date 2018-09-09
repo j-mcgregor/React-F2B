@@ -76,20 +76,22 @@ class EditPost extends Component {
             const { dispatch } = value;
 
             return(
-              <div>
-                <header className="blog-header py-3">
+              <div className="container my-5 py-5">
+                <header className="row py-3">
                   <div className="row flex-nowrap justify-content-between align-items-center">
-                    <div className="col-4 pt-1">
+                      <div className="col-8">
+                      <div className="col-4 pt-1">
+                      </div>
+                      <div className="col-4 text-center">
+                        <h3 className="text-dark" href="#">Add Post</h3>
+                      </div>
+                      <div className="col-4 d-flex justify-content-end align-items-center">
+                        <Link to="/posts">
+                          Back to all posts
+                        </Link>
+                      </div>
                     </div>
-                    <div className="col-4 text-center">
-                      <h3 className="text-dark" href="#">Add Post</h3>
                     </div>
-                    <div className="col-4 d-flex justify-content-end align-items-center">
-                      <Link to="/posts">
-                        Back to all posts
-                      </Link>
-                    </div>
-                  </div>
                 </header>
                 <div className="card">
                   <div className="card-body">

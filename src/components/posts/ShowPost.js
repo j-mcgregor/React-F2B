@@ -34,7 +34,7 @@ class ShowPost extends Component {
             <div className="col-md-6 offset-md-3">
               <header className="blog-header py-3">
                 <div className="row flex-nowrap justify-content-between align-items-center">
-                  <div className="col-4 pt-1">
+                  <div className="col-8 pt-1">
                     <Link className="" to="/posts">
                       Back to all posts
                     </Link>
