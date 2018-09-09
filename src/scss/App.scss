@@ -100,16 +100,30 @@ body {
 .gallery {
   font-family: 'Impact Label Reversed';
 
+  a {
+    color: #fac51a;
+    transition:.2s;
+
+    &:hover {
+      text-decoration: none;
+      font-style:italic;
+    }
+  }
+
   .col-sm-3 {
     padding:0;
     overflow: hidden !important;
+    background:black;
 
     img {
       transition: .2s;
-
+      filter: grayscale(100%);
+      opacity: .5;
+      
       &:hover:not(.modal) {
-        transform:scale(1.1);
-        opacity: .5;
+        opacity: 1;
+        filter: grayscale(0%);
+        transform:scale(1.05);
       }
     }
   }
@@ -236,7 +250,8 @@ body {
 
 // INDEX PAGES
 .list-group-item {
-  background: #343a40;
+  background: #6c7074;
+  color:white;
 }
 .card-header {
   &:hover {
@@ -246,6 +261,7 @@ body {
   }
 }
 
+// EDIT CONTACT
 .edit-contact .card-body {
   background: #202529;
   color:white;
@@ -253,6 +269,12 @@ body {
 
   input[type="submit"] {
     color:white;
+    transition:.2s;
+
+    &:hover {
+      background: #fac51a;
+      color: #202529;
+    }
   }
 
 }

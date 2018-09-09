@@ -9,8 +9,8 @@ export default () => {
         <div className="text-center my-auto">
           <h1 className="display-2">A Golden Ticket</h1>
           <p className="lead">Well, kind of. Not really. More of a chance to show off what I can do with React and Context</p>
-          <h5 className="display-5">Adapted and expanded by <a href="#" target="_blank">Jack McGregor</a></h5>
-          <h6 className="display-6">Initial tutorial by <a href="#" target="_blank">Traversy Media</a></h6>
+          <h5 className="display-5">Adapted and expanded by <a href="https://www.linkedin.com/in/jack-mcgregor/" target="_blank">Jack McGregor</a></h5>
+          <h6 className="display-6">Initial tutorial by <a href="https://www.traversymedia.com/" target="_blank">Traversy Media</a></h6>
         </div>
       </div>
       {/* DIVIDER 1 */}
@@ -35,9 +35,9 @@ export default () => {
               </p>
             </div>
             <div className="col-sm-6 mx-auto icon-container">
-              <a href="" target="_blank"><i className="fab fa-youtube"></i></a>
-              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
-              <a href="" target="_blank"><i className="fab fa-patreon"></i></a>
+              <a href="https://www.youtube.com/traversymedia" target="_blank"><i className="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/traversymedia?lang=en" target="_blank"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.patreon.com/traversymedia" target="_blank"><i className="fab fa-patreon"></i></a>
             </div>
           </div>
         </div>
@@ -48,22 +48,7 @@ export default () => {
           <div className="row">
             <div className="col-lg-10 mx-auto align-middle">
               <h2>React and the Context API</h2>
-              <p className="lead mb-5">What a wonderful marvel of modern software engineering. EJS and ERB were undoubtedly game-changers, as was jQuery, but React just...clicks</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* DIVIDER 4 */}
-      <section className="full-section bg-warning text-white">
-        <div className="container text-center">
-          <div className="row">
-            <div className="col-lg-10 mx-auto align-middle">
-              <h2 className="mb-5">How to reach me</h2>
-              <div className="col-sm-12 mx-auto icon-container">
-                  <a href="" target="_blank"><i className="fas fa-envelope"></i></a>
-                  <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
-                <a href="" target="_blank"><i className="fab fa-facebook"></i></a>
-              </div>
+              <p className="lead mb-5">What a wonderful marvel of modern software engineering. EJS and ERB were undoubtedly game-changers, as was jQuery, but React is the (kind-of) new kid on the block</p>
             </div>
           </div>
         </div>

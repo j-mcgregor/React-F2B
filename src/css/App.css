@@ -58,14 +58,24 @@ body {
 
 .gallery {
   font-family: 'Impact Label Reversed'; }
+  .gallery a {
+    color: #fac51a;
+    transition: .2s; }
+    .gallery a:hover {
+      text-decoration: none;
+      font-style: italic; }
   .gallery .col-sm-3 {
     padding: 0;
-    overflow: hidden !important; }
+    overflow: hidden !important;
+    background: black; }
     .gallery .col-sm-3 img {
-      transition: .2s; }
+      transition: .2s;
+      filter: grayscale(100%);
+      opacity: .5; }
       .gallery .col-sm-3 img:hover:not(.modal) {
-        transform: scale(1.1);
-        opacity: .5; }
+        opacity: 1;
+        filter: grayscale(0%);
+        transform: scale(1.05); }
 
 .modal .modal-content {
   border-radius: 0;
@@ -152,7 +162,8 @@ body {
   100% {
     background: #af729b; } }
 .list-group-item {
-  background: #343a40; }
+  background: #6c7074;
+  color: white; }
 
 .card-header:hover {
   background: #343a40;
@@ -164,6 +175,10 @@ body {
   color: white;
   font-family: 'Impact Label Reversed'; }
   .edit-contact .card-body input[type="submit"] {
-    color: white; }
+    color: white;
+    transition: .2s; }
+    .edit-contact .card-body input[type="submit"]:hover {
+      background: #fac51a;
+      color: #202529; }
 
 /*# sourceMappingURL=App.css.map */

@@ -6,19 +6,19 @@ export default class About extends Component {
     return (
       <div className="container-fluid mt-5 p-3 bg-dark text-white text-center gallery">
         <div className="row">
-          <div className="col-sm-10 offset-sm-1 p-4">
+          <div className="col-sm-6 offset-sm-3 p-4">
             <h1 className="display-4">A little bit more about myself</h1>
-            <h4 className="display-6">My name's Jack and I fancy myself as digitally creative</h4>
+            <h4 className="display-6 text-center">My name's Jack McGregor and I'm a fullstack developer, graphic designer and web development instructor.</h4>
           </div>
         </div>
         <div className="row">
           <div className="col-sm-6 offset-sm-3 p-4 text-justify">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni ipsam incidunt dolores ex neque ab dicta molestias eos molestiae pariatur esse fuga perferendis, consequatur illo cumque ad repellendus ipsa rem?</p>
+            <p>This site your on now started out as a code-along to Brad Traversy's <a href="https://www.udemy.com/react-front-to-back/learn/v4/overview" target="_blank">React Front to Back</a> course on Udemy and I got a little bit carried away by adding another resource from <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON Placeholder</a>, a landing page, this About page and styling it all with Bootstrap and SASS. You can view this site's Github Repo <a href="https://github.com/patchyj/React-F2B" target="_blank">here</a></p>
           </div>
         </div>
         <div className="row">
           <Thumbnail 
-            image="./img/placeholder.gif" 
+            image="./img/Pinata_screenshot.png" 
             title="Piñata"  
             link="https://the-real-pinata.herokuapp.com/" 
             byline="The Fun Way to Start your Day"
@@ -26,7 +26,7 @@ export default class About extends Component {
             target="target-1"
           />
           <Thumbnail 
-            image="./img/placeholder.gif" 
+            image="./img/COYI_screenshot.png" 
             title="The Circle of Young Intrapreneurs"  
             link="https://coyi-temp-staging.herokuapp.com/" 
             byline="Do Well, Do Good"
