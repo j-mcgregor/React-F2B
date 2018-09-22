@@ -18,36 +18,12 @@ export default class About extends Component {
         </div>
         <div className="row">
           <Thumbnail 
-            image="./img/Pinata_screenshot.png" 
-            title="Piñata"  
-            link="https://the-real-pinata.herokuapp.com/" 
-            byline="The Fun Way to Start your Day"
-            description="Piñata was a group project created during my course at General Assembly using the MEAN stack"
-            target="target-1"
-          />
-          <Thumbnail 
             image="./img/COYI_screenshot.png" 
             title="The Circle of Young Intrapreneurs"  
             link="https://coyi-temp-staging.herokuapp.com/" 
             byline="Do Well, Do Good"
             description="The Circle of Youung Intrapreneurs is an ongoing pro-bono project built initially as a Rails app. The next step will be to rebuild it using a Rails API and a React front end "
             target="target-2"
-          />
-          <Thumbnail 
-            image="./img/Bloom_screenshot.png" 
-            title=""  
-            link="" 
-            byline=""
-            description=""
-            target="target-7"
-          />
-          <Thumbnail 
-            image="./img/Oddjob_screenshot.png" 
-            title="OddJob"  
-            link="" 
-            byline="Make the little things count"
-            description="My final project at General Assembly in June 2017, made with a Rails API, Postgres and AngularJS"
-            target="target-7"
           />
           <Thumbnail 
             image="./img/KillingEve_screenshot.png" 
@@ -66,11 +42,11 @@ export default class About extends Component {
             target="target-3"
           />
           <Thumbnail 
-            image="./img/placeholder.gif" 
-            title="Rails API with JWT built TDD"  
-            link="" 
-            byline=""
-            description="This was the initial code-along of Austin Kabiru's amazing tutorial on scotch.io (see link below), building a RESTful JSON Rails API with JWT authentication fully TDD"
+            image="./img/ReactRedux_screenshot.png" 
+            title="React and Redux"  
+            link="https://patchyj.github.io/React-F2B-Redux/" 
+            byline="Getting better and better"
+            description="An expansion of part 2 of Brad Traversy's React Front to Back course, with APIs from JSON Placeholder and Unsplash"
             target="target-5"
           />
           <Thumbnail 
@@ -81,6 +57,32 @@ export default class About extends Component {
             description="Building on Austin Kabiru's code-along, I built another Rails API for a potential User Management System, using JWT, Rails API, PostgresQL, RSpec, FactoryBot, React and Bootstrap"
             target="target-6"
           />
+         <Thumbnail 
+            image="./img/Pinata_screenshot.png" 
+            title="Piñata"  
+            link="https://the-real-pinata.herokuapp.com/" 
+            byline="The Fun Way to Start your Day"
+            description="Piñata was a group project created during my course at General Assembly using the MEAN stack"
+            target="target-1"
+          />
+
+          <Thumbnail 
+            image="./img/Oddjob_screenshot.png" 
+            title="OddJob"  
+            link="" 
+            byline="Make the little things count"
+            description="My final project at General Assembly in June 2017, made with a Rails API, Postgres and AngularJS"
+            target="target-7"
+          />
+          <Thumbnail 
+            image="./img/Bloom_screenshot.png" 
+            title=""  
+            link="" 
+            byline=""
+            description=""
+            target="target-7"
+          />
+
         </div>
       </div>
     )
